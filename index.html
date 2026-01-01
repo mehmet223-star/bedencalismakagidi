@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Duyuru Sitesi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f0f4f8;min-height:100vh;display:flex;justify-content:center;padding:20px;}
+.wrapper{width:100%;max-width:1000px;background:rgba(255,255,255,0.95);border-radius:12px;padding:20px;box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.header h2{color:#1e3a8a;}
+button{padding:8px 15px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:0.3s;}
+.btn{background:#2563eb;color:white;}
+.btn-red{background:#dc2626;color:white;}
+.btn-gray{background:#444;color:white;}
+.btn:hover{opacity:0.9;}
+.card{background:rgba(255,255,255,0.95);border-radius:10px;padding:15px;margin-bottom:20px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.comment{background:#eef3ff;padding:10px;border-radius:8px;margin-bottom:10px;}
+#creditsBox{display:none;margin-top:10px;background:#f3f3f3;padding:10px;border-radius:8px;}
+</style>
+<script>
+function toggleCredits(){ 
+    let box=document.getElementById("creditsBox"); 
+    box.style.display = box.style.display==="none"?"block":"none"; 
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <h2>Hoş geldin, MEHMET 6/F</h2>
+    <button class="btn-red">Çıkış Yap</button>
+  </div>
+
+  <!-- Duyurular -->
+  <div class="card">
+    <h3>📢 Duyurular</h3>
+    <div class="card"><b>Duyuru 1</b><br>Bu bir örnek duyurudur.</div>
+    <div class="card"><b>Duyuru 2</b><br>Bu bir örnek duyurudur.</div>
+  </div>
+
+  <!-- Yorumlar -->
+  <div class="card">
+    <h3>💬 Yorumlar</h3>
+    <div class="comment"><b>ALPER 6/F</b><br>Merhaba!</div>
+    <div class="comment"><b>Beytullah 6/F</b><br>Selam!</div>
+  </div>
+
+  <!-- Wallpaper -->
+  <div class="card">
+    <h3>🖼 Wallpaper</h3>
+    <img src="https://via.placeholder.com/800x200" alt="Wallpaper" style="width:100%;border-radius:10px;">
+  </div>
+
+  <!-- Credits -->
+  <div class="card">
+    <button class="btn-gray" onclick="toggleCredits()">📌 Credits</button>
+    <div id="creditsBox">
+      <b>Hazırlayanlar:</b><br>
+      İBRAHİM 6/F<br>KAMİL 6/F<br>MEHMET 6/F<br>ALPER 6/F<br>BEYTULLAH 6/F
+    </div>
+  </div>
+</div>
+</body>
+</html>
